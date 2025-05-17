@@ -1,8 +1,26 @@
+import img01 from "/src/components/gallery/images/حافظ.jpg";
+import img02 from "/src/components/gallery/images/عبدالوهاب.jpg";
+import img03 from "/src/components/gallery/images/mahmoud osama.jpg";
+import img04 from "/src/components/gallery/images/user.jpg";
+import img05 from "/src/components/gallery/images/user.jpg";
+import img06 from "/src/components/gallery/images/طه.jpg";
+import img07 from "/src/components/gallery/images/user.jpg";
+import img08 from "/src/components/gallery/images/إيهاب فؤاد.jpg";
+import img09 from "/src/components/gallery/images/user.jpg";
+import img10 from "/src/components/gallery/images/user.jpg";
+import img11 from "/src/components/gallery/images/user.jpg";
+import img12 from "/src/components/gallery/images/عاطف.jpg";
+import img13 from "/src/components/gallery/images/user.jpg";
+import img14 from "/src/components/gallery/images/محمد سالم.jpg";
+import img15 from "/src/components/gallery/images/user.jpg";
+import img16 from "/src/components/gallery/images/user.jpg";
+import img17 from "/src/components/gallery/images/user.jpg";
+
 export const teamMembers = [
 {
 name: "محمد السيد حافظ",
 role: "قائد المشروع",
-imageUrl: "/src/components/gallery/images/حافظ.jpg",
+imageUrl: img01,
 description: "قائد فريق تطوير المشروع، خبير في تطوير البرمجيات وإدارة المشاريع التقنية مع شغف بالتاريخ المصري.",
 department: "إدارة المشروع",
 links: {
@@ -12,7 +30,7 @@ links: {
 {
 name: "عبدالوهاب محمد جادو",
 role: "مدير المحتوى التاريخي",
-imageUrl: "/src/components/gallery/images/عبدالوهاب.jpg",
+imageUrl: img02,
 description: "متخصص في التاريخ المصري وتوثيق التراث، يقود فريق البحث التاريخي وتطوير المحتوى.",
 department: "المحتوى والتوثيق",
 links: {
@@ -22,7 +40,7 @@ links: {
 {
 name: "محمود أسامة محمد",
 role: "مطور واجهات المستخدم",
-imageUrl: "/src/components/gallery/images/mahmoud osama.jpg" ,
+imageUrl:img03 ,
 description: "مطور واجهات مستخدم متقدم، متخصص في تصميم وتطوير تجارب المستخدم التفاعلية.",
 department: "التطوير التقني",
 links: {
@@ -32,7 +50,7 @@ links: {
 {
 name:"عبدالرحمن محمد سالم",
 role: "مدير الأمن السيبراني",
-imageUrl: "/src/components/gallery/images/user.jpg",
+imageUrl: img04,
 description: "مسؤول عن أمن المعلومات وحماية البيانات في المشروع.",
 department: "التطوير التقني",
 links: {
@@ -42,7 +60,7 @@ links: {
 {
 name: "أبانوب عماد ",
 role: "مصمم جرافيك",
-imageUrl: "/src/components/gallery/images/user.jpg",
+imageUrl: img05,
 description: "مصمم جرافيك موهوب، متخصص في تصميم الهوية البصرية والواجهات الرقمية.",
 department: "التصميم",
 links: {
@@ -52,7 +70,7 @@ links: {
 {
 name: "طه أحمد أبوالعينين",
 role: "باحث تاريخي",
-imageUrl: "/src/components/gallery/images/طه.jpg",
+imageUrl: img06,
 description: "باحث متخصص في تاريخ أسرة محمد علي وتأثيرها على مصر الحديثة.",
 department: "المحتوى والتوثيق",
 links: {
@@ -62,7 +80,7 @@ links: {
 {
 name: "مهند زكريا أمين",
 role: "مطور خلفية",
-imageUrl: "/src/components/gallery/images/user.jpg",
+imageUrl:img07,
 description: "مطور متخصص في تطوير الخدمات الخلفية وقواعد البيانات.",
 department: "التطوير التقني",
 links: {
@@ -72,7 +90,7 @@ links: {
 {
 name: "أيهاب فؤاد علي",
 role: "مدير تجربة المستخدم",
-imageUrl: "/src/components/gallery/images/إيهاب فؤاد.jpg",
+imageUrl: img08,
 description: "خبير في تصميم تجربة المستخدم وتحليل سلوك المستخدمين.",
 department: "التصميم",
 links: {
@@ -82,7 +100,7 @@ links: {
 {
 name: "بسمة يحي صابر",
 role: "مديرة المشاركة المجتمعية",
-imageUrl: "/src/components/gallery/images/user.jpg",
+imageUrl: img09,
 description: "مسؤولة عن التواصل مع المجتمع وتنظيم الفعاليات التاريخية.",
 department: "التواصل المجتمعي",
 links: {
@@ -92,7 +110,7 @@ links: {
 {
 name: "محمد عصام عبدالحسيب",
 role: "مطور تطبيقات موبايل",
-imageUrl: "/src/components/gallery/images/user.jpg",
+imageUrl: img10,
 description: "مطور متخصص في تطوير تطبيقات الهواتف الذكية باستخدام React Native.",
 department: "التطوير التقني",
 links: {
@@ -102,7 +120,7 @@ links: {
 {
 name: "محمد محمود محمد",
 role: "مهندس DevOps",
-imageUrl: "/src/components/gallery/images/user.jpg",
+imageUrl: img11,
 description: "خبير في أتمتة عمليات التطوير والنشر وإدارة البنية التحتية السحابية.",
 department: "التطوير التقني",
 links: {
@@ -112,7 +130,7 @@ links: {
 {
 name: "محمد عاطف حسن",
 role: "مصور فوتوغرافي",
-imageUrl: "/src/components/gallery/images/عاطف.jpg",
+imageUrl: img12,
 description: "مصور محترف متخصص في توثيق الآثار والمباني التاريخية.",
 department: "التصميم",
 links: {
@@ -122,7 +140,7 @@ links: {
 {
 name: "مريم محمود عبدالله",
 role: "محررة محتوى",
-imageUrl: "/src/components/gallery/images/user.jpg",
+imageUrl: img13,
 description: "محررة محتوى متخصصة في كتابة وتحرير المحتوى التاريخي والثقافي.",
 department: "المحتوى والتوثيق",
 links: {
@@ -132,7 +150,7 @@ links: {
 {
 name: "محمد سالم محمد",
 role: "باحث أرشيفي",
-imageUrl: "/src/components/gallery/images/محمد سالم.jpg",
+imageUrl: img14,
 description: "متخصص في البحث الأرشيفي وتوثيق الوثائق التاريخية.",
 department: "المحتوى والتوثيق",
 links: {
@@ -142,7 +160,7 @@ links: {
 {
 name: "إسلام حسني حماد",
 role: "مترجم",
-imageUrl: "/src/components/gallery/images/user.jpg",
+imageUrl: img15,
 description: "مترجم متخصص في ترجمة الوثائق والنصوص التاريخية من وإلى العربية والإنجليزية والتركية.",
 department: "المحتوى والتوثيق",
 links: {
@@ -152,7 +170,7 @@ links: {
 {
 name: "مصطفي إيهاب فوزي",
 role: "مختص SEO",
-imageUrl: "/src/components/gallery/images/user.jpg",
+imageUrl: img16,
 description: "خبير في تحسين محركات البحث وزيادة ظهور المحتوى الرقمي.",
 department: "التطوير التقني",
 links: {
@@ -162,7 +180,7 @@ links: {
 {
 name: "إيمان خالد صبحي",
 role: "مصممة موشن جرافيك",
-imageUrl: "/src/components/gallery/images/user.jpg",
+imageUrl: img17,
 description: "متخصصة في تصميم الرسوم المتحركة والفيديوهات التفاعلية.",
 department: "التصميم",
 links: {
