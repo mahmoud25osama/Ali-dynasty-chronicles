@@ -71,7 +71,7 @@ const Footer = () => {
         <div className="mt-12 pt-8 border-t border-white/10">
           <div className="text-center">
             <p className="text-sm text-white/70 hover:text-white/90 transition-colors">
-              &copy; {currentYear} تاريخ أسرة محمد علي. جميع الحقوق محفوظة.
+              &copy; {currentYear} Made With &lt;3 by ELROUBY
             </p>
           </div>
         </div>
