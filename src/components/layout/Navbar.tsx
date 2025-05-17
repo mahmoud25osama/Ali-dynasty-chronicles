@@ -85,7 +85,7 @@ const Navbar = () => {
                 <div className="md:hidden flex items-center gap-4">
           <button 
             onClick={toggleMenu}
-            className="text-royal-cream hover:text-royal-blue"
+            className="text-royal-blue hover:text-royal-blue/60"
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>

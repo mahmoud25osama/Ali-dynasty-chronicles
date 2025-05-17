@@ -20,7 +20,7 @@ const HeroSection = () => {
                 اكتشف إرث العائلة التي شكلت مصر الحديثة
               </p>
             </div>
-            <div className="flex flex-col pr-5 sm:flex-row gap-4">
+            <div className="flex flex-col md:pr-5 lg:pr-5 px-2 sm:flex-row gap-4">
               <Link 
                 to="/family" 
                 className="bg-royal-gold text-royal-blue font-bold py-4 px-10 text-lg md:text-xl rounded-lg hover:bg-royal-gold/90 transition text-center shadow-lg">
