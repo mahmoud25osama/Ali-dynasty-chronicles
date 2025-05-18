@@ -13,7 +13,7 @@ import img12 from "/src/components/gallery/images/عاطف.jpg";
 import img13 from "/src/components/gallery/images/user.jpg";
 import img14 from "/src/components/gallery/images/محمد سالم.jpg";
 import img15 from "/src/components/gallery/images/إسلام.jpg";
-import img16 from "/src/components/gallery/images/user.jpg";
+import img16 from "/src/components/gallery/images/مصطفي.jpg";
 import img17 from "/src/components/gallery/images/user.jpg";
 
 export const teamMembers = [

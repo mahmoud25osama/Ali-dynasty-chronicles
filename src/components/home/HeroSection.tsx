@@ -3,9 +3,10 @@ import { Link } from 'react-router-dom';
 import img1 from '../gallery/images/castle.png'
 
 const HeroSection = () => {
-  return (    <div className="min-h-screen">
+  return (
+    <div className="relative  text-royal-cream">
       {/* Hero Section */}
-      <section id="home" className="relative  text-royal-cream">
+      <section id="home">
         <div className="royal-container relative z-10 py-20 md:py-32">
           <div className=" max-w-3xl ">
           
