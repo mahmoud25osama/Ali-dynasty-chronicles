@@ -1,18 +1,18 @@
 import img01 from "/src/components/gallery/images/حافظ.jpg";
 import img02 from "/src/components/gallery/images/عبدالوهاب.jpg";
 import img03 from "/src/components/gallery/images/mahmoud osama.jpg";
-import img04 from "/src/components/gallery/images/user.jpg";
+import img04 from "/src/components/gallery/images/بندر.jpg";
 import img05 from "/src/components/gallery/images/user.jpg";
 import img06 from "/src/components/gallery/images/طه.jpg";
-import img07 from "/src/components/gallery/images/user.jpg";
+import img07 from "/src/components/gallery/images/mohand.jpg";
 import img08 from "/src/components/gallery/images/إيهاب فؤاد.jpg";
 import img09 from "/src/components/gallery/images/user.jpg";
-import img10 from "/src/components/gallery/images/user.jpg";
-import img11 from "/src/components/gallery/images/user.jpg";
+import img10 from "/src/components/gallery/images/mo essam.jpg";
+import img11 from "/src/components/gallery/images/ميشو.jpg";
 import img12 from "/src/components/gallery/images/عاطف.jpg";
 import img13 from "/src/components/gallery/images/user.jpg";
 import img14 from "/src/components/gallery/images/محمد سالم.jpg";
-import img15 from "/src/components/gallery/images/user.jpg";
+import img15 from "/src/components/gallery/images/إسلام.jpg";
 import img16 from "/src/components/gallery/images/user.jpg";
 import img17 from "/src/components/gallery/images/user.jpg";
 
@@ -21,7 +21,7 @@ export const teamMembers = [
 name: "محمد السيد حافظ",
 role: "قائد المشروع",
 imageUrl: img01,
-description: "قائد فريق تطوير المشروع، خبير في تطوير البرمجيات وإدارة المشاريع التقنية مع شغف بالتاريخ المصري.",
+description: "قائد فريق تطوير المشروع، خبير في تطوير البرمجيات مع شغف بالتاريخ المصري.",
 department: "إدارة المشروع",
 links: {
     email: "mohamed-ELsayed@google.com"

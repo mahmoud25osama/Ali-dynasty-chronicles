@@ -35,17 +35,49 @@ description
 }) => {
 const controls = useAnimation();
 const [position, setPosition] = useState(0);
-const [isAnimating, setIsAnimating] = useState(true);
+const [isAnimating, setIsAnimating] = useState(false);
 const [currentPage, setCurrentPage] = useState(0);
+const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+const [isHovered, setIsHovered] = useState(false);
+
+useEffect(() => {
+    const handleResize = () => {
+        const mobile = window.innerWidth < 768;
+        setIsMobile(mobile);
+        if (mobile) {
+            stopAnimation();
+        } else if (!isHovered) {
+            startAnimation();
+        }
+    };
+
+    window.addEventListener('resize', handleResize);
+    handleResize(); // Initial check
+
+    return () => window.removeEventListener('resize', handleResize);
+}, [isHovered]);
+
+useEffect(() => {
+    if (!isMobile) {
+        if (isHovered) {
+            stopAnimation();
+        } else {
+            startAnimation();
+        }
+    }
+}, [isHovered, isMobile]);
 
 const startAnimation = async () => {
+    if (isMobile) return; // Don't animate on mobile
     setIsAnimating(true);
     await controls.start({
-        x: [0, -2000],
+        x: [0, "260%"],
         transition: {
-            duration: 40,
+            duration: 250,
             repeat: Infinity,
-            ease: "linear"
+            ease: "linear",
+            repeatType: "loop",
+            repeatDelay: 0.5,
         }
     });
 };
@@ -54,42 +86,33 @@ const stopAnimation = () => {
     setIsAnimating(false);
     controls.stop();
 };
+
 const moveLeft = () => {
     stopAnimation();
-    const newPosition = position - 300;
+    const moveAmount = isMobile ? 260 : 380; // Adjust based on card width
+    const newPosition = position + moveAmount;
     setPosition(newPosition);
     controls.start({
         x: newPosition,
-        transition: { duration: 0.5, ease: "easeOut" }
+        transition: { duration: 0.3, ease: "easeOut" }
     });
-    setCurrentPage((prev) => Math.min(prev + 1, Math.ceil(members.length / (window.innerWidth < 768 ? 1 : 3)) - 1));
+    setCurrentPage((prev) => Math.min(prev + 1, Math.ceil(members.length / (isMobile ? 1 : 3)) - 1));
 };
 
 const moveRight = () => {
     stopAnimation();
-    const newPosition = position + 300;
+    const moveAmount = isMobile ? 260 : 380; // Adjust based on card width
+    const newPosition = position - moveAmount;
     setPosition(newPosition);
     controls.start({
         x: newPosition,
-        transition: { duration: 0.5, ease: "easeOut" }
+        transition: { duration: 0.3, ease: "easeOut" }
     });
     setCurrentPage((prev) => Math.max(prev - 1, 0));
 };
 
-const goToPage = (page: number) => {
-    stopAnimation();
-    setCurrentPage(page);
-    const offset = -page * 300 * (window.innerWidth < 768 ? 1 : 3);
-    setPosition(offset);
-    controls.start({
-        x: offset,
-        transition: { duration: 0.5, ease: "easeOut" }
-    });
-}
-
-useEffect(() => {
-    startAnimation();
-}, []);
+// Calculate number of items to render based on screen size
+const itemsToRender = [...members, ...members];
 
 return (
     <section className="py-4 md:py-8 px-1 md:px-2 bg-gradient-to-b from-[#1D3557]/5 to-transparent relative overflow-hidden">
@@ -115,16 +138,18 @@ return (
                     <motion.div 
                         className="flex gap-2 md:gap-4 px-2 md:px-4"
                         animate={controls}
-                        onHoverStart={stopAnimation}
-                        onHoverEnd={startAnimation}
                         style={{ x: 0 }}
                     >
-                        {[...members, ...members, ...members].map((member, index) => (
+                        {itemsToRender.map((member, index) => (
                             <motion.div
                                 key={index}
                                 className="w-[260px] md:w-[380px] shrink-0"
+                                initial={false}
+                                layout="position"
+                                onMouseEnter={() => setIsHovered(true)}
+                                onMouseLeave={() => setIsHovered(false)}
                             >
-                                <div className="group bg-white/95 backdrop-blur-sm rounded-lg md:rounded-xl overflow-hidden border border-[#1D3557]/10">
+                                <div className="group bg-white/95 backdrop-blur-sm rounded-lg md:rounded-xl overflow-hidden border border-[#1D3557]/10 cursor-pointer">
                                     <div className="relative">
                                         <div className="h-[180px] md:h-[280px] overflow-hidden">
                                             <img
@@ -161,7 +186,7 @@ return (
                                                         href={member.links.linkedin}
                                                         target="_blank"
                                                         rel="noopener noreferrer"
-                                                        className="text-[#1D3557]"
+                                                        className="text-royal-blue"
                                                         aria-label={`معرفة المزيد عن ${member.name}`}
                                                     >
                                                         <FaScroll size={20} className="hidden md:inline md:transform md:hover:scale-110 md:transition-transform md:hover:rotate-6" />
@@ -171,19 +196,17 @@ return (
                                                 {member.links.github && (
                                                     <a
                                                         href={member.links.github}
-                                                        target="_blank"
-                                                        rel="noopener noreferrer"
-                                                        className="text-[#1D3557]"
+                                                        className="text-royal-blue"
                                                         aria-label={`مستندات ${member.name}`}
                                                     >
-                                                        <FaFeatherPointed size={20} className="hidden md:inline md:transform md:hover:scale-110 md:transition-transform md:hover:-rotate-12" />
+                                                        <FaFeatherPointed size={20} className="hidden md:inline md:transform md:hover:scale-110 md:transition-transform md:hover:translate-x-1 md:hover:-translate-y-1" />
                                                         <FaFeatherPointed size={20} className="md:hidden" />
                                                     </a>
                                                 )}
                                                 {member.links.email && (
                                                     <a
                                                         href={`mailto:${member.links.email}`}
-                                                        className="text-[#1D3557]"
+                                                        className="text-royal-blue"
                                                         aria-label={`التواصل بخصوص ${member.name}`}
                                                     >
                                                         <FaRegPaperPlane size={18} className="hidden md:inline md:transform md:hover:scale-110 md:transition-transform md:hover:translate-x-1 md:hover:-translate-y-1" />
@@ -199,19 +222,19 @@ return (
                     </motion.div>
                 </div>
 
-                <div className="absolute inset-y-0 left-0 w-12 md:w-20 bg-gradient-to-r from-white via-white/80 to-transparent z-10" />
-                <div className="absolute inset-y-0 right-0 w-12 md:w-20 bg-gradient-to-l from-white via-white/80 to-transparent z-10" />
+                <div className="absolute inset-y-0 left-0 w-10 md:w-16 bg-gradient-to-r from-royal-cream via-royal-cream/80 to-transparent z-20" />
+                <div className="absolute inset-y-0 right-0 w-10 md:w-16 bg-gradient-to-l from-royal-cream via-royal-cream/80 to-transparent z-20" />
 
                 <button
                     onClick={moveRight}
-                    className="absolute left-1 md:left-4 top-1/2 -translate-y-1/2 bg-[#1D3557] text-white flex items-center justify-center p-2 md:p-3 rounded-full shadow-none opacity-70 transition-colors md:hover:bg-[#1D3557]/90 md:hover:opacity-100 md:transition-all md:duration-300 md:transform md:hover:scale-110 z-20"
+                    className="absolute left-1 md:left-4 top-1/2 -translate-y-1/2 bg-royal-blue text-white flex items-center justify-center p-2 md:p-3 rounded-full shadow-none opacity-70 transition-colors md:hover:bg-[#1D3557]/90 md:hover:opacity-100 md:transition-all md:duration-300 md:transform md:hover:scale-110 z-20"
                     aria-label="السابق"
                 >
                     <IoIosArrowBack className="m-0" size={window.innerWidth < 768 ? 20 : 32} />
                 </button>
                 <button
                     onClick={moveLeft}
-                    className="absolute right-1 md:right-4 top-1/2 -translate-y-1/2 bg-[#1D3557] text-white flex items-center justify-center p-2 md:p-3 rounded-full shadow-none opacity-70 transition-colors md:hover:bg-[#1D3557]/90 md:hover:opacity-100 md:transition-all md:duration-300 md:transform md:hover:scale-110 z-20"
+                    className="absolute right-1 md:right-4 top-1/2 -translate-y-1/2 bg-royal-blue text-white flex items-center justify-center p-2 md:p-3 rounded-full shadow-none opacity-70 transition-colors md:hover:bg-[#1D3557]/90 md:hover:opacity-100 md:transition-all md:duration-300 md:transform md:hover:scale-110 z-20"
                     aria-label="التالي"
                 >
                     <IoIosArrowForward className="m-0" size={window.innerWidth < 768 ? 20 : 32} />

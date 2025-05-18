@@ -53,7 +53,8 @@ const Navbar = () => {
         { title: 'تواصل معنا', path: '/#contact' },
     ];
 
-    return (        <nav className={`fixed top-0 left-0 right-0 z-50 font-medium font-naskh py-2 transition-all duration-500 ${
+  return (
+    <nav className={`fixed top-0 left-0 right-0 z-50 font-medium font-naskh py-4 transition-all duration-500 ${
             isScrolled ? 'bg-royal-cream/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
         }`}>
             <div className="royal-container flex items-center justify-between">
@@ -62,14 +63,14 @@ const Navbar = () => {
                     onClick={(e) => handleNavClick('/', e)}
                     className="flex items-center gap-2"
                 >
-                    <img src={logo} className="w-10 md:w-14 h-12 md:h-14 object-contain transition-transform duration-300 hover:scale-110 cursor-pointer" alt="شعار أسرة محمد علي" />
+                    <img src={logo} className="w-10 md:w-14 h-14 md:h-16 object-contain transition-transform duration-300 hover:scale-110 cursor-pointer" alt="شعار أسرة محمد علي" />
                     <div className="flex flex-col">                        <span className="text-lg font-bold text-royal-blue font-arabic">محمد علي</span>
                         <span className="text-xs text-royal-gray font-naskh">أسرة محمد علي</span>
                     </div>
                 </Link>
 
                 {/* Desktop Navigation */}
-                <div className="hidden md:flex items-center gap-6 space-x-8">
+                <div className="hidden md:flex items-center gap-2 mr-8">
                     {navLinks.map((link) => (                <Link
                             key={link.path}
                             to={link.path}
