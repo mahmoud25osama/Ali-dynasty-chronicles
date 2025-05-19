@@ -71,7 +71,7 @@ const startAnimation = async () => {
     if (isMobile) return; // Don't animate on mobile
     setIsAnimating(true);
     await controls.start({
-        x: [0, "260%"],
+        x: [position, "260%"],
         transition: {
             duration: 250,
             repeat: Infinity,
@@ -90,7 +90,7 @@ const stopAnimation = () => {
 const moveLeft = () => {
     stopAnimation();
     const moveAmount = isMobile ? 260 : 380; // Adjust based on card width
-    const newPosition = position + moveAmount;
+    const newPosition = position - moveAmount;
     setPosition(newPosition);
     controls.start({
         x: newPosition,
@@ -102,7 +102,7 @@ const moveLeft = () => {
 const moveRight = () => {
     stopAnimation();
     const moveAmount = isMobile ? 260 : 380; // Adjust based on card width
-    const newPosition = position - moveAmount;
+    const newPosition = position + moveAmount;
     setPosition(newPosition);
     controls.start({
         x: newPosition,
