@@ -1,4 +1,4 @@
-# Welcome to Family Of Mohamed Ali Project
+# Welcome to Ali-dynasty-chronicles Project
 
 ## What technologies are used for this project?
 
