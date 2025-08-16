@@ -1,16 +1,13 @@
-import React from 'react';
 import { useParams, Link } from 'react-router-dom';
-import Navbar from '../components/layout/Navbar';
-import Footer from '../components/layout/Footer';
 import { ArrowLeft } from 'lucide-react';
-import img01 from "@/components/gallery/images/mohamed.jpeg";
-import img02 from "@/components/gallery/images/img2.jpg";
-import img03 from "@/components/gallery/images/img3.jpg";
-import img04 from "@/components/gallery/images/img4.jpeg";
-import img05 from "@/components/gallery/images/img5.jpeg";
-import img06 from "@/components/gallery/images/img6.jpeg";
-import img07 from "@/components/gallery/images/img7.jpeg";
-import img08 from "@/components/gallery/images/img8.jpeg";
+import img01 from "@/assets/images/mohamed.jpeg";
+import img02 from "@/assets/images/img2.jpg";
+import img03 from "@/assets/images/img3.jpg";
+import img04 from "@/assets/images/img4.jpeg";
+import img05 from "@/assets/images/img5.jpeg";
+import img06 from "@/assets/images/img6.jpeg";
+import img07 from "@/assets/images/img7.jpeg";
+import img08 from "@/assets/images/img8.jpeg";
 
 // Sample biography data with real historical images and Arabic translations
 const biographies = {
@@ -164,7 +161,6 @@ const Biography = () => {
   if (!biography) {
     return (
       <div className={`min-h-screen flex flex-col  rtl`}>
-        <Navbar />
         <div className="flex-grow flex items-center justify-center">
           <div className="text-center p-8">
             <h2 className="text-2xl font-bold mb-4 font-arabic">
@@ -178,14 +174,12 @@ const Biography = () => {
             </Link>
           </div>
         </div>
-        <Footer />
       </div>
     );
   }
 
   return (
     <div className={`min-h-screen flex flex-col rtl`}>
-      <Navbar />
       
       <main className="flex-grow pt-10 md:pt-12">
         <div className="royal-container py-12">
@@ -246,7 +240,6 @@ const Biography = () => {
       </Link>
         </div>
       </main>
-      <Footer />
     </div>
   );
 };

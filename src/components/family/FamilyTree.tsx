@@ -1,12 +1,10 @@
 
-import React from 'react';
 import { Link } from 'react-router-dom';
 import PersonCard, { PersonProps } from './PersonCard';
-import { url } from 'inspector';
-import img01 from "@/components/gallery/images/mohamed.jpeg";
-import img02 from "@/components/gallery/images/img2.jpg";
-import img03 from "@/components/gallery/images/img3.jpg";
-import img04 from "@/components/gallery/images/img4.jpeg";
+import img01 from "@/assets/images/mohamed.jpeg";
+import img02 from "@/assets/images/img2.jpg";
+import img03 from "@/assets/images/img3.jpg";
+import img04 from "@/assets/images/img4.jpeg";
 
 const familyMembers: PersonProps[] = [
   {

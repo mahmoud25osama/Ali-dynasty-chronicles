@@ -1,18 +1,15 @@
-import React, { useState } from 'react';
-import Navbar from '../components/layout/Navbar';
-import Footer from '../components/layout/Footer';
+import { useState } from 'react';
 import { X } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
-import img00 from "@/components/gallery/images/cover1.jpg";
-import img01 from "@/components/gallery/images/Mohamed_Ali_Mosque_HDR.jpg";
-import img02 from "@/components/gallery/images/قصر عابدين.jpg";
-import img03 from "@/components/gallery/images/مسجد-الرفاعى.jpg";
-import img04 from "@/components/gallery/images/40495-احتفالات-قناة-السويس-1869_.jpg";
-import img05 from "@/components/gallery/images/العربة.jpg";
-import img06 from "@/components/gallery/images/مسجد_محمد_علي_بقلعة_صلاح_الدين_-_23.jpg";
-import img07 from "@/components/gallery/images/منتزه.jpg";
-import img08 from "@/components/gallery/images/كوبري_القناطر_الخيرية_وروعتها.jpg";
+import img01 from "@/assets/images/Mohamed_Ali_Mosque_HDR.jpg";
+import img02 from "@/assets/images/قصر عابدين.jpg";
+import img03 from "@/assets/images/مسجد-الرفاعى.jpg";
+import img04 from "@/assets/images/40495-احتفالات-قناة-السويس-1869_.jpg";
+import img05 from "@/assets/images/العربة.jpg";
+import img06 from "@/assets/images/مسجد_محمد_علي_بقلعة_صلاح_الدين_-_23.jpg";
+import img07 from "@/assets/images/منتزه.jpg";
+import img08 from "@/assets/images/كوبري_القناطر_الخيرية_وروعتها.jpg";
 
 
 interface GalleryImage {
@@ -83,8 +80,8 @@ const galleryImages: GalleryImage[] = [
 ];
 
 const GalleryPage = () => {
-  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
-  const [activeImage, setActiveImage] = useState<GalleryImage | null>(null);
+  const [selectedCategory, setSelectedCategory] = useState(null);
+  const [activeImage, setActiveImage] = useState(null);
   
   
   const categories = ['all', ...new Set(galleryImages.map(img => img.category))];
@@ -95,7 +92,6 @@ const GalleryPage = () => {
     
   return (
     <div className="min-h-screen flex flex-col">
-      <Navbar />
         <main className="flex-grow pt-2 md:pt-5">
         <div className=" bg-royal-blue text-white py-20" >
           <div className="royal-container">            <h1 className="text-4xl md:text-5xl font-bold mb-4 mt-8 font-arabic">
@@ -192,8 +188,6 @@ const GalleryPage = () => {
           </button>
         </div>
       )}
-      
-      <Footer />
     </div>
   );
 };

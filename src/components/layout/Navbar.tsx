@@ -2,11 +2,10 @@ import React, { useState,useEffect  } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import { useNavigate, useLocation } from 'react-router-dom';
-import  logo  from "../gallery/images/logo.png";
+import  logo  from "@/assets/images/logo.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen)
@@ -15,14 +14,6 @@ const Navbar = () => {
     const navigate = useNavigate();
     const location = useLocation();
 
-    useEffect(() => {
-        const handleScroll = () => {
-            setIsScrolled(window.scrollY > 50);
-        };
-
-        window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
-    }, []);
 
     const scrollToTop = () => {
         window.scrollTo({
@@ -55,7 +46,7 @@ const Navbar = () => {
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 font-medium font-naskh py-4 transition-all duration-500 ${
-            isScrolled ? 'bg-royal-cream/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
+            'bg-royal-cream/95 backdrop-blur-md shadow-lg'
         }`}>
             <div className="royal-container flex items-center justify-between">
                 <Link 

@@ -1,5 +1,4 @@
-import React from 'react';
-import img01 from "@/components/gallery/images/منتزه.jpg";
+import img01 from "@/assets/images/منتزه.jpg";
 const Introduction = () => {
   return (
     <section className="py-12 md:py-24 bg-royal-cream/30">

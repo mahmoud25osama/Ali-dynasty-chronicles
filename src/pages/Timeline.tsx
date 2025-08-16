@@ -1,9 +1,6 @@
 import React, { useEffect, useRef } from 'react';
-
 import { Link } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
-import Navbar from '../components/layout/Navbar';
-import Footer from '../components/layout/Footer';
 
 interface TimelineEvent {
   year: string;
@@ -125,34 +122,7 @@ const timelineEvents: TimelineEvent[] = [
 
 const TimelinePage = () => {
   const [filter, setFilter] = React.useState<string | null>(null);
-  const timelineRef = useRef<HTMLDivElement>(null);
   
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setTimeout(() => {
-              entry.target.classList.add('visible');
-            }, entry.target.getAttribute('data-index') ? 
-               Number(entry.target.getAttribute('data-index')) * 100 : 0);
-          }
-        });
-      },
-      {
-        threshold: 0.2,
-        rootMargin: '-50px'
-      }
-    );
-
-    const items = timelineRef.current?.querySelectorAll('.timeline-item');
-    items?.forEach((item) => observer.observe(item));
-
-    return () => {
-      items?.forEach((item) => observer.unobserve(item));
-    };
-  }, [filter]); // Re-run when filter changes
-
   const categories = [
     { id: 'all', label: 'الكل' },
     { id: 'سياسي', label: 'سياسي' },
@@ -167,7 +137,6 @@ const TimelinePage = () => {
 
   return (
     <div className="min-h-screen flex flex-col rtl">
-      <Navbar />
       
       <main className="flex-grow pt-20 md:pt-24">
         <div className="bg-royal-blue/90 backdrop-blur-sm text-white py-20">
@@ -199,7 +168,7 @@ const TimelinePage = () => {
           </div>
 
           {/* Timeline */}
-          <div className="relative space-y-8" ref={timelineRef}>
+          <div className="relative space-y-8" >
             {filteredEvents.map((event, index) => (
               <div 
                 key={index} 
@@ -217,8 +186,8 @@ const TimelinePage = () => {
           <Link 
             to="/" 
             className="mt-12 inline-flex items-center gap-2 bg-royal-blue text-white 
-                     font-bold py-3 px-8 rounded-lg hover:bg-royal-blue/90 
-                     transition-all duration-300 hover:scale-105 shadow-lg"
+                      font-bold py-3 px-8 rounded-lg hover:bg-royal-blue/90 
+                      transition-all duration-300 hover:scale-105 shadow-lg"
           >
             <ArrowLeft size={20} />
             العودة للرئيسية
@@ -226,7 +195,6 @@ const TimelinePage = () => {
         </div>
       </main>
       
-      <Footer />
     </div>
   );
 };

@@ -1,9 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import img01 from "@/components/gallery/images/Mohamed_Ali_Mosque_HDR.jpg";
-import img02 from "@/components/gallery/images/قصر عابدين.jpg";
-import img03 from "@/components/gallery/images/قصر محمد علي بشبرا.jpeg";
-import img04 from "@/components/gallery/images/كوبري_امستعمرة_القناطر_الخيرية.jpg";
+import img01 from "@/assets/images/Mohamed_Ali_Mosque_HDR.jpg";
+import img02 from "@/assets/images/قصر عابدين.jpg";
+import img03 from "@/assets/images/قصر محمد علي بشبرا.jpeg";
+import img04 from "@/assets/images/كوبري_امستعمرة_القناطر_الخيرية.jpg";
+
+
 interface GalleryImage {
   id: string;
   title: string;

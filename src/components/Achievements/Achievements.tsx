@@ -1,33 +1,5 @@
-import { useEffect, useRef } from 'react';
 
 const Achievements = () => {
-    const cardsRef = useRef<HTMLDivElement>(null);
-
-    useEffect(() => {
-        const observer = new IntersectionObserver(
-            (entries) => {
-                entries.forEach((entry, index) => {
-                    if (entry.isIntersecting) {
-                        // Add delay based on card index
-                        setTimeout(() => {
-                            entry.target.classList.add('visible');
-                        }, index * 100); // تقليل التأخير من 200 إلى 100
-                    }
-                });
-            },
-            {
-                threshold: 0.1, // تقليل العتبة لتسريع ظهور العناصر
-                rootMargin: '-30px'
-            }
-        );
-
-        const cards = cardsRef.current?.querySelectorAll('.royal-card');
-        cards?.forEach((card) => observer.observe(card));
-
-        return () => {
-            cards?.forEach((card) => observer.unobserve(card));
-        };
-    }, []);
 
     const achievements = [
         {
@@ -109,12 +81,12 @@ const Achievements = () => {
             <div className="royal-container">
                 <h2 className="title font-arabic">أبرز الإنجازات</h2>
                 
-                <div ref={cardsRef}>
+                <div >
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {achievements.map((achievement, index) => (
                             <div 
                                 key={index} 
-                                className="royal-card group"
+                                className="royal-card  group"
                             >
                                 <div className="flex items-start gap-4 mb-6">
                                     <span className="text-5xl group-hover:scale-110 transition-transform duration-100">

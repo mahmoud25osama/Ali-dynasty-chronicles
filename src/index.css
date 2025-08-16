@@ -55,7 +55,7 @@
     direction: rtl;
   }  body {
     @apply text-foreground font-naskh;
-    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("./components/gallery/images/innerBackground.jpg") no-repeat center center fixed;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("@/assets/images/innerBackground.jpg") no-repeat center center fixed;
     background-size: cover;
   }
 
@@ -117,14 +117,10 @@
   }
   .royal-card {
     @apply bg-white/90 backdrop-blur-sm p-6 rounded-xl shadow-md border-2 border-royal-gold/10 
-           transform transition-all duration-700 hover:shadow-xl hover:border-royal-gold/30
-           opacity-0 translate-y-12 rotate-2 font-naskh;
+            transform transition-all duration-700 hover:shadow-xl hover:border-royal-gold/30 font-naskh;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   }
 
-  .royal-card.visible {
-    @apply opacity-100 translate-y-0 rotate-0;
-  }
 
   .royal-card:nth-child(even) {
     @apply rotate-[-2deg];
@@ -171,12 +167,8 @@
   /* Timeline Styles */
   .timeline-item {
     @apply relative pl-10 pb-8 border-r-2 border-royal-blue/20 last:border-0
-        opacity-0 transform translate-y-4
         transition-all duration-700 ease-out;
-  }
-
-  .timeline-item.visible {
-    @apply opacity-100 translate-y-0;
+        
   }
 
   .timeline-dot {
@@ -409,10 +401,6 @@
   transition: all 0.3s ease;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
   font-family: 'Noto Kufi Arabic', sans-serif;
-  -webkit-border-radius:;
-  -moz-border-radius:;
-  -ms-border-radius:;
-  -o-border-radius:;
 }
 
 .hero-btn-primary {

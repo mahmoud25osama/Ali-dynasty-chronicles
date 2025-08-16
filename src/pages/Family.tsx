@@ -1,17 +1,14 @@
-import React from 'react';
-import Navbar from '../components/layout/Navbar';
-import Footer from '../components/layout/Footer';
 import { Link } from 'react-router-dom';
 import PersonCard, { PersonProps } from '../components/family/PersonCard';
 import { ArrowLeft } from 'lucide-react';
-import img01 from "@/components/gallery/images/mohamed.jpeg";
-import img02 from "@/components/gallery/images/img2.jpg";
-import img03 from "@/components/gallery/images/img3.jpg";
-import img04 from "@/components/gallery/images/img4.jpeg";
-import img05 from "@/components/gallery/images/img5.jpeg";
-import img06 from "@/components/gallery/images/img6.jpeg";
-import img07 from "@/components/gallery/images/img7.jpeg";
-import img08 from "@/components/gallery/images/img8.jpeg";
+import img01 from "@/assets/images/mohamed.jpeg";
+import img02 from "@/assets/images/img2.jpg";
+import img03 from "@/assets/images/img3.jpg";
+import img04 from "@/assets/images/img4.jpeg";
+import img05 from "@/assets/images/img5.jpeg";
+import img06 from "@/assets/images/img6.jpeg";
+import img07 from "@/assets/images/img7.jpeg";
+import img08 from "@/assets/images/img8.jpeg";
 
 // Extended family members data with real historical images
 const familyMembers: PersonProps[] = [
@@ -84,7 +81,6 @@ const familyMembers: PersonProps[] = [
 const Family = () => {
   return (
     <div className="min-h-screen flex flex-col ">
-      <Navbar />
       
       <main className="flex-grow">
         <div className="royal-container py-16">
@@ -123,7 +119,6 @@ const Family = () => {
         </div>
       </main>
       
-      <Footer />
     </div>
   );
 };
