@@ -20,5 +20,4 @@ export default defineConfig(({ mode }) => ({
     },
     
   },
-  base:"/Ali-dynasty-chronicles ",
 }));
