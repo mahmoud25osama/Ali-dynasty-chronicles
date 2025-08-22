@@ -29,16 +29,23 @@ To set up this project locally, follow the steps below:
 git clone https://github.com/your-username/family-of-mohamed-ali.git
 cd family-of-mohamed-ali
 ```
-2. Install dependencies
-```
+### 2. Install dependencies
+
+```bash
 npm install
 ```
-3. Start the development server
+### 3. Start the development server
+
 ```
 npm run dev
 ```
-Open `http://localhost:5173` in your browser to view the app.
-📁 Project Structure
+
+### 4. Open `http://localhost:5173` in your browser to view the app.
+
+---
+
+## 📁 Project Structure
+
 ```
 src/
 │
@@ -48,38 +55,49 @@ src/
 ├── styles/            # Tailwind configuration and global styles
 └── main.tsx           # Application entry point
 ```
-📦 Deployment
+---
+
+## 📦 Deployment
 
 This project is deployed using Vercel. To deploy your own version:
 
-    Push your project to GitHub
+#### 1.Push your project to GitHub
 
-    Connect your repo to Vercel
+#### 2.Connect your repo to Vercel
 
-    Follow the deployment steps on Vercel’s dashboard
+#### 3.Follow the deployment steps on Vercel’s dashboard
 
-✨ Features
+---
 
-    Responsive layout for desktop and mobile
+## ✨ Features
 
-    Clean visual timeline or tree structure (assumed from theme)
+- Responsive layout for desktop and mobile
 
-    Modern, maintainable code with TypeScript
+- Clean visual timeline or tree structure (assumed from theme)
 
-    Styled using utility-first Tailwind CSS
+- Modern, maintainable code with TypeScript
 
-🤝 Contributing
+- Styled using utility-first Tailwind CSS
+
+---
+
+
+## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
 
 If you'd like to contribute:
 
-    Fork the repo
+ ### 1. Fork the repo
 
-    Create a new branch (git checkout -b feature-name)
+ ### 2. Create a new branch 
+```bash
+  (git checkout -b feature-name)
+```
+ ### 3. Commit your changes 
+```bash
+  (git commit -m 'Add some feature')
+```
+ ### 4. Push to the branch (git push origin feature-name)
 
-    Commit your changes (git commit -m 'Add some feature')
-
-    Push to the branch (git push origin feature-name)
-
-    Open a Pull Request
+ ### 5. Open a Pull Request
