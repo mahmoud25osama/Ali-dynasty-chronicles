@@ -20,9 +20,21 @@ Welcome to the **Ali-dynasty-chronicles** project — a web application dedicate
 
 ---
 
+## 🛠️ Technologies Used
+
+This project is built using the following modern web technologies:
+
+- ⚡ [Vite](https://vitejs.dev/) – Fast build tool and development server
+- ⚛️ [React](https://reactjs.org/) – For building interactive UI components
+- 🟦 [TypeScript](https://www.typescriptlang.org/) – Type-safe JavaScript
+- 🎨 [Tailwind CSS](https://tailwindcss.com/) – Utility-first CSS framework for styling
+
 ---
 
-## 📷 Landing Page
+## 📷 ScreenShots
+
+
+###  Landing Page
 ![Ali-dynasty-chronicles ](src/assets/images/LandingPage_Family%20Ali.png)
 
 ### Family Page
@@ -38,20 +50,6 @@ Welcome to the **Ali-dynasty-chronicles** project — a web application dedicate
 ![Mobile Screenshot](src/assets/images/mobileVeiw.png)
 
 ---
-
-
-## 🛠️ Technologies Used
-
-This project is built using the following modern web technologies:
-
-- ⚡ [Vite](https://vitejs.dev/) – Fast build tool and development server
-- ⚛️ [React](https://reactjs.org/) – For building interactive UI components
-- 🟦 [TypeScript](https://www.typescriptlang.org/) – Type-safe JavaScript
-- 🎨 [Tailwind CSS](https://tailwindcss.com/) – Utility-first CSS framework for styling
-
----
-
-
 
 ## 🚀 Getting Started
 
