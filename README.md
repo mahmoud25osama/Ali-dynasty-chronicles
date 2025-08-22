@@ -18,7 +18,7 @@ Welcome to the **Ali-dynasty-chronicles** project — a web application dedicate
 
 - Styled using utility-first Tailwind CSS
 
----
+
 
 ## 🛠️ Technologies Used
 
@@ -29,7 +29,7 @@ This project is built using the following modern web technologies:
 - 🟦 [TypeScript](https://www.typescriptlang.org/) – Type-safe JavaScript
 - 🎨 [Tailwind CSS](https://tailwindcss.com/) – Utility-first CSS framework for styling
 
----
+
 
 ## 📷 ScreenShots
 
@@ -74,7 +74,7 @@ npm run dev
 
 ### 4. Open `http://localhost:5173` in your browser to view the app.
 
----
+
 
 ## 📁 Project Structure
 
@@ -87,7 +87,7 @@ src/
 ├── styles/            # Tailwind configuration and global styles
 └── main.tsx           # Application entry point
 ```
----
+
 
 ## 📦 Deployment
 
@@ -99,7 +99,7 @@ This project is deployed using Vercel. To deploy your own version:
 
 #### 3.Follow the deployment steps on Vercel’s dashboard
 
----
+
 
 ## 🤝 Contributing
 
@@ -122,7 +122,7 @@ If you'd like to contribute:
  ### 5. Open a Pull Request
 
 
----
+
 
 
 ## 👨‍💻 Author
@@ -130,4 +130,4 @@ If you'd like to contribute:
 **Mahmoud Osama**
 🔗 [GitHub Profile](https://github.com/mahmoud25osama)
 
----
+
