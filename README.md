@@ -8,6 +8,38 @@ Welcome to the **Ali-dynasty-chronicles** project — a web application dedicate
 
 ---
 
+## ✨ Features
+
+- Responsive layout for desktop and mobile
+
+- Clean visual timeline or tree structure (assumed from theme)
+
+- Modern, maintainable code with TypeScript
+
+- Styled using utility-first Tailwind CSS
+
+---
+
+---
+
+## 📷 Landing Page
+![Ali-dynasty-chronicles ](src/assets/images/LandingPage_Family%20Ali.png)
+
+### Family Page
+![Family Screenshot](src/assets/images/TreePage_Family%20Ali.png)
+
+### TimeLine Page
+![TimeLine Screenshot](src/assets/images/LinePage_Family%20Ali.png)
+
+### Gallery Page
+![Gallery Screenshot](src/assets/images/GalleryPage_Family%20Ali.png)
+
+### 📱 Mobile Responsive
+![Mobile Screenshot](src/assets/images/mobileVeiw.png)
+
+---
+
+
 ## 🛠️ Technologies Used
 
 This project is built using the following modern web technologies:
@@ -18,6 +50,8 @@ This project is built using the following modern web technologies:
 - 🎨 [Tailwind CSS](https://tailwindcss.com/) – Utility-first CSS framework for styling
 
 ---
+
+
 
 ## 🚀 Getting Started
 
@@ -69,19 +103,6 @@ This project is deployed using Vercel. To deploy your own version:
 
 ---
 
-## ✨ Features
-
-- Responsive layout for desktop and mobile
-
-- Clean visual timeline or tree structure (assumed from theme)
-
-- Modern, maintainable code with TypeScript
-
-- Styled using utility-first Tailwind CSS
-
----
-
-
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
@@ -101,3 +122,14 @@ If you'd like to contribute:
  ### 4. Push to the branch (git push origin feature-name)
 
  ### 5. Open a Pull Request
+
+
+---
+
+
+## 👨‍💻 Author
+
+**Mahmoud Osama**
+🔗 [GitHub Profile](https://github.com/mahmoud25osama)
+
+---

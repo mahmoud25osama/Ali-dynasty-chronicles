@@ -1,7 +1,7 @@
 import React, { useState,useEffect  } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
-import { useNavigate, useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import  logo  from "@/assets/images/logo.png";
 
 const Navbar = () => {
@@ -11,7 +11,6 @@ const Navbar = () => {
     setIsOpen(!isOpen)
   };
 
-    const navigate = useNavigate();
     const location = useLocation();
 
 
